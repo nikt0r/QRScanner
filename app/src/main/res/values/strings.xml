@@ -1,0 +1,71 @@
+<resources>
+    <string name="alert_copied">Copied!</string>
+
+    <string name="app_name">QR Scanner X</string>
+
+    <string name="btn_call_number">Call</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_copy">Copy</string>
+    <string name="btn_copy_text">Copy as Text</string>
+    <string name="btn_discard">Discard</string>
+    <string name="btn_dismiss">Dismiss</string>
+    <string name="btn_look_up">Look up</string>
+    <string name="btn_open_maps">Show on Map</string>
+    <string name="btn_open_url">Open</string>
+    <string name="btn_save_contact">Add to Contacts</string>
+    <string name="btn_save_to_calendar">Save to calendar</string>
+    <string name="btn_send_email">Send E-mail</string>
+    <string name="btn_send_sms">Send SMS</string>
+
+    <string name="descr_qr_code">QR code</string>
+
+    <string name="header_calendar_event">Calendar Event</string>
+    <string name="header_contact">Contact</string>
+    <string name="header_email">E-mail</string>
+    <string name="header_geo">Location</string>
+    <string name="header_isbn">Barcode</string>
+    <string name="header_phone">Phone</string>
+    <string name="header_product">Product</string>
+    <string name="header_sms">SMS</string>
+    <string name="header_text">Text</string>
+    <string name="header_unknown">Unknown Code Type</string>
+    <string name="header_url">URL</string>
+    <string name="header_wifi">Wifi Network</string>
+
+    <string name="label_address">Address(es)</string>
+    <string name="label_body">Body</string>
+    <string name="label_contact_title">Title</string>
+    <string name="label_description">Notes</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_emails">E-mail(s)</string>
+    <string name="label_encrType">Encryption</string>
+    <string name="label_end_datetime">End</string>
+    <string name="label_event_title">Title</string>
+    <string name="label_isbn">ISBN</string>
+    <string name="label_latitude">Latitude</string>
+    <string name="label_location">Location</string>
+    <string name="label_longitude">Longitude</string>
+    <string name="label_message">Message</string>
+    <string name="label_name">Name</string>
+    <string name="label_organization">Organization</string>
+    <string name="label_organizer">Organizer</string>
+    <string name="label_password">Password</string>
+    <string name="label_phone">Phone</string>
+    <string name="label_phones">Phone(s)</string>
+    <string name="label_product">Product</string>
+    <string name="label_raw_value">Raw value</string>
+    <string name="label_rawtext">Text</string>
+    <string name="label_rawvalue">Raw value</string>
+    <string name="label_ssid">SSID</string>
+    <string name="label_start_datetime">Start</string>
+    <string name="label_status">Status</string>
+    <string name="label_subject">Subject</string>
+    <string name="label_text_content">Text</string>
+    <string name="label_url">URL</string>
+    <string name="label_url_title">Name</string>
+    <string name="label_urls">URL(s)</string>
+
+    <string name="msg_all_perms_required">All requested permissions required to use this app - Please restart</string>
+    <string name="msg_usecase_already_bound">Error: use case has already been bound</string>
+    <string name="msg_cant_resolve_camera">Error: unable to use camera</string>
+</resources>

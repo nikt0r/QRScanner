@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="snap_width">96dp</dimen>
+    <dimen name="snap_height">96dp</dimen>
+    <dimen name="margin_top1">104dp</dimen>
+    <dimen name="margin_top2">152dp</dimen> <!-- margin_top1 + 48dp -->
+    <dimen name="snap_corner">16dp</dimen>
+    <dimen name="snap_border">5dp</dimen>
+    <dimen name="label_width">86dp</dimen>
+    <dimen name="margin_start">16dp</dimen>
+    <dimen name="margin_end">16dp</dimen>
+</resources>

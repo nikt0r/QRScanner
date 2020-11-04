@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="pl.polciuta.qrscanner.camera.SharedViewModel" />
+
+        <variable
+            name="barcodeText"
+            type="pl.polciuta.qrscanner.barcode.BarcodeText" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+<!--                <androidx.constraintlayout.widget.Guideline-->
+<!--                    android:id="@+id/guidelineStart"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintGuide_begin="16dp" />-->
+
+<!--                <androidx.constraintlayout.widget.Guideline-->
+<!--                    android:id="@+id/guidelineEnd"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintGuide_end="16dp" />-->
+
+                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                    android:id="@+id/top"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    app:layout_constrainedWidth="true"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"-->
+                <!--                    app:layout_constraintStart_toStartOf="@id/guidelineStart"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+                <!--                    <com.google.android.material.textview.MaterialTextView-->
+                <!--                        android:id="@+id/header"-->
+                <!--                        style="@style/CardHeader"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginBottom="8dp"-->
+                <!--                        android:text="@string/header_text"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="@id/divider0"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent" />-->
+
+                <!--                    <com.google.android.material.button.MaterialButton-->
+                <!--                        android:id="@+id/btn_discard"-->
+                <!--                        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="@string/btn_discard"-->
+                <!--                        android:minHeight="0dp"-->
+                <!--                        android:minWidth="0dp"-->
+                <!--                        android:paddingStart="2dp"-->
+                <!--                        android:paddingEnd="2dp"-->
+                <!--                        android:paddingTop="4dp"-->
+                <!--                        android:paddingBottom="4dp"-->
+                <!--                        app:layout_constraintBaseline_toBaselineOf="@+id/header"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent" />-->
+
+                <!--                    <View-->
+                <!--                        android:id="@+id/divider0"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="1dp"-->
+                <!--                        android:layout_marginTop="32dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:background="?android:attr/listDivider"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/image"-->
+                <!--                        android:layout_width="@dimen/snap_width"-->
+                <!--                        android:layout_height="@dimen/snap_height"-->
+                <!--                        android:layout_marginTop="16dp"-->
+                <!--                        android:contentDescription="@string/descr_qr_code"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/divider0"-->
+                <!--                        tools:srcCompat="@tools:sample/avatars" />-->
+
+                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+                <include
+                    android:id="@+id/top"
+                    layout="@layout/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:layout_marginEnd="@dimen/margin_end"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    bind:label="@{barcodeText.getLabel(context)}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cardRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/margin_end"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constraintBottom_toTopOf="@id/btn_copytext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/top" />
+
+                <!--                <com.google.android.material.button.MaterialButton-->
+                <!--                    android:id="@+id/btn_discard"-->
+                <!--                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="8dp"-->
+                <!--                    android:layout_marginEnd="16dp"-->
+                <!--                    android:text="@string/btn_discard"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toStartOf="@id/btn_copytext" />-->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_copytext"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:onClick="@{() -> barcodeText.copyText(viewmodel)}"
+                    android:text="@string/btn_copy"
+                    app:icon="@drawable/ic_copy_outlined"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/cardRecyclerView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

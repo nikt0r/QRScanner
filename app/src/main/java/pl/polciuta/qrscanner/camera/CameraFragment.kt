@@ -55,6 +55,10 @@ class CameraFragment : Fragment() {
             overlaySurfaceHolder = holder.apply {
                 setFormat(PixelFormat.TRANSPARENT)
             }
+            setOnTouchListener { _, event ->
+                discardCard(event.y)
+                performClick()
+            }
         }
 
         initObservers()
@@ -108,6 +112,17 @@ class CameraFragment : Fragment() {
             val (barcodeX, barcodeY) = getBarcodePosition(measuredWidth, measuredHeight)
             val cardEndY = (measuredHeight - cardHeight) / 2
             motion.runTransition(barcodeX, barcodeY, cardEndY.toFloat()) { restartImageAnalysis() }
+        }
+    }
+
+    // Discard card when clicked outside of it
+    private fun discardCard(touchY: Float) {
+        model.cardHeightLiveData.value?.let {
+            with(motionLayout) {
+                val topY = (measuredHeight - it) / 2
+                val bottomY = (measuredHeight + it) / 2
+                if (touchY < topY || touchY > bottomY) motion.discard()
+            }
         }
     }
 

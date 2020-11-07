@@ -47,4 +47,8 @@ class Motion(private val motionLayout: MotionLayout) {
         }
     }
 
+    fun discard() {
+        motionLayout.transitionToState(R.id.phase2end)
+    }
+
 }

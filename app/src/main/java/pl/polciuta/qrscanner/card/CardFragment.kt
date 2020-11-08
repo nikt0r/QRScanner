@@ -1,7 +1,6 @@
-package pl.polciuta.qrscanner.camera
+package pl.polciuta.qrscanner.card
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.card_calendar_event.*
 import pl.polciuta.qrscanner.BR
-import pl.polciuta.qrscanner.card.CardAdapter
+import pl.polciuta.qrscanner.camera.SharedViewModel
 
 class CardFragment : Fragment() {
 

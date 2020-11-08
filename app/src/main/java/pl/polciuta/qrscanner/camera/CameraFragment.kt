@@ -21,6 +21,7 @@ import pl.polciuta.qrscanner.analyzer.RelativeCornerPoints
 import pl.polciuta.qrscanner.animation.Motion
 import pl.polciuta.qrscanner.animation.Reticle
 import pl.polciuta.qrscanner.barcode.BarcodeUnknown
+import pl.polciuta.qrscanner.card.CardFragment
 import pl.polciuta.qrscanner.config.highlightColors
 import pl.polciuta.qrscanner.databinding.CameraBinding
 

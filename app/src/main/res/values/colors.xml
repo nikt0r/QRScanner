@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+<!--    <color name="colorPrimary">#6200EE</color>-->
+<!--    <color name="colorPrimaryDark">#3700B3</color>-->
+<!--    <color name="colorAccent">#03DAC5</color>-->
 <!--    <color name="colorFocusRect">#81D4FA</color>-->
+    <color name="colorPrimary">#F29422</color>
+    <color name="colorPrimaryDark">#A64B37</color>
+    <color name="colorAccent">#049DD9</color>
+    <color name="colorAccent2">#0476D9</color>
     <color name="colorFocusRect">#FFF59D</color>
     <color name="activity_background">#000000</color>
     <color name="barcode_reticle_background">#99000000</color>

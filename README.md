@@ -13,3 +13,4 @@ You can also scan product barcodes and look them up in barcode database.
 
 <img src="/screenshots/Screenshot_1604939933.png" width=200> <img src="/screenshots/Screenshot_1604939952.png" width=200> <img src="/screenshots/Screenshot_1604940090.png" width=200> <img src="/screenshots/Screenshot_1604940720.png" width=200>  
 
+Available in [Google Play Store](https://play.google.com/store/apps/details?id=pl.polciuta.qrscanner)
